@@ -6,5 +6,6 @@
     "esModuleInterop": true,
     "target": "ES2016",
     "module": "CommonJS"
-  }
+  },
+  "include": ["src"]
 }

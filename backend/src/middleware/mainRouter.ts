@@ -40,6 +40,11 @@ import { router as addAttendanceRoute } from "../routes/teacherRoutes/addAttenda
 
 const mainRouter = express.Router();
 
+mainRouter.use("/",(req, res, next) => {
+    res.send("Server is running ✅");
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
 // Middleware to log requests
 
 // common routes

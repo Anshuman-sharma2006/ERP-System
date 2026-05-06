@@ -42,6 +42,11 @@ const getStudents_2 = require("../routes/teacherRoutes/getStudents");
 const addAttendance_1 = require("../routes/teacherRoutes/addAttendance");
 const mainRouter = express_1.default.Router();
 exports.mainRouter = mainRouter;
+mainRouter.use("/", (req, res, next) => {
+    res.send("Server is running ✅");
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
 // Middleware to log requests
 // common routes
 mainRouter.use("/signin", signIn_1.router);

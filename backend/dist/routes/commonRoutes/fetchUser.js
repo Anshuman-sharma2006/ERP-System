@@ -39,9 +39,9 @@ router.post("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             }
             const userData = {
                 firstName: user.firstName,
-                lastName: user.lastName,
+                lastName: user.lastName || "",
                 email: user.email,
-                user_id: user.user_id,
+                user_id: user.user_id || "",
                 role: user.role,
                 status: user.status
             };

@@ -47,7 +47,7 @@ router.post("/", async (req: Request, res: Response) => {
                 firstName: teacher.firstName,
                 lastName: teacher.lastName,
                 email: teacher.email,
-                user_id: userId,
+                user_id: userId!,
                 password: hashedPassword,
                 role: "teacher",
               });
